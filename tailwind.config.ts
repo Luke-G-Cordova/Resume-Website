@@ -16,8 +16,8 @@ const config: Config = {
         grue: 'var(--grue)',
         'grey-dark': 'var(--grey-dark)',
         'grey-light': 'var(--grey-light)',
-        'green-neon': 'var(--green-neon',
-        'red-neon': 'var(--red-neon',
+        'green-neon': 'var(--green-neon)',
+        'red-neon': 'var(--red-neon)',
       },
       fontFamily: {
         calibri: ['Calibri', 'sans-serif'],
