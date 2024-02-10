@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: normal;
+  font-weight: 100 200;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-ExtraLight.ttf');
+}
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-Light.ttf');
+}
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-SemiLight.ttf');
+}
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-Regular.ttf');
+}
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: normal;
+  font-weight: 700 900;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: italic;
+  font-weight: 100 200;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-ExtraLightItalic.ttf');
+}
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: italic;
+  font-weight: 300;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-LightItalic.ttf');
+}
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-SemiLightItalic.ttf');
+}
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: italic;
+  font-weight: 500;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-Italic.ttf');
+}
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: italic;
+  font-weight: 600;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-SemiBoldItalic.ttf');
+}
+@font-face {
+  font-family: 'CaskaydiaCove Nerd Font';
+  font-style: italic;
+  font-weight: 700 900;
+  src: url('/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFont-BoldItalic.ttf');
+}
