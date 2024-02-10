@@ -1,0 +1,38 @@
+.navTab {
+  position: relative;
+}
+
+.navTab::before,
+.navTab::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 12px;
+  background-color: var(--grey-dark);
+  bottom: -1px;
+  z-index: 2;
+}
+
+.navTab::before {
+  left: -8px;
+  clip-path: path('M0 12H9V0H8V4C8 7.86599 4.86599 11 1 11H0V12Z');
+}
+.navTab::after {
+  right: -8px;
+  clip-path: path('M9 12H0V0H1V4C1 7.86599 4.13401 11 8 11H9V12Z');
+}
+
+.navTab.current {
+  margin: 0px 7px;
+}
+.navTab.current > div,
+.navTab.current::before,
+.navTab.current::after {
+  background-color: var(--black);
+}
+
+.navTab:not(.current):hover > div,
+.navTab:not(.current):hover::before,
+.navTab:not(.current):hover::after {
+  background-color: #171717;
+}
