@@ -35,4 +35,5 @@
 .navTab:not(.current):hover::before,
 .navTab:not(.current):hover::after {
   background-color: #171717;
+  cursor: pointer;
 }
