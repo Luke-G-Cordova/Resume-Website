@@ -20,7 +20,7 @@ export default function Navbar({ currentPath }: { currentPath: Paths }) {
       <Tab currentPath={currentPath} href="/">
         <span className="pl-1">
           <Image
-            src="/Rectangle.png"
+            src="/WUI-icon.svg"
             alt="rectangle"
             width="20"
             height="20"
