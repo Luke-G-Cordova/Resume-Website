@@ -8,7 +8,7 @@ export default function Navbar({ currentPath }: { currentPath: Paths }) {
       <Tab currentPath={currentPath} href="/terminal">
         <span className="pl-1">
           <Image
-            src="/Rectangle.png"
+            src="/Rectangle.svg"
             alt="rectangle"
             width="20"
             height="20"
@@ -32,7 +32,7 @@ export default function Navbar({ currentPath }: { currentPath: Paths }) {
       <Tab currentPath={currentPath} href="/about">
         <span className="pl-1">
           <Image
-            src="/Rectangle.png"
+            src="/Rectangle.svg"
             alt="rectangle"
             width="20"
             height="20"
@@ -74,7 +74,11 @@ function Tab({
   children?: React.ReactNode;
 }) {
   return (
-    <div className="flex-grow overflow-clip" style={{ maxWidth: '353px' }}>
+    <div
+      className="flex-grow overflow-clip"
+      cy-data="navTab"
+      style={{ maxWidth: '353px' }}
+    >
       <div
         className={`${styles.navTab} ${
           currentPath === href ? styles.current : ''
