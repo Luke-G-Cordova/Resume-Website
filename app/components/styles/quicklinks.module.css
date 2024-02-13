@@ -11,11 +11,11 @@
   transition: all 0.3s ease-in;
 }
 
-.sideOpen > input:checked + div {
-  /* transform: scaleX(1); */
-  display: block;
+.sideLinks > a {
+  padding: 4px 8px 4px 16px;
+  transition: 0.3s;
 }
 
-.sideOpen > div + input + div {
-  display: none;
+.sideLinks > a:hover {
+  background-color: var(--black);
 }

@@ -5,57 +5,64 @@ import styles from '@/components/styles/quicklinks.module.css';
 export default function QuickLinks() {
   return (
     <>
-      <ImmobileQuickLinks />
+      <ImmobileQuickLinks>
+        <div className="flex flex-col">
+          <div className="flex">
+            <span className="text-lg font-semibold">SKILLS</span>
+            <div className="flex-grow"></div>
+            <Image src="/dot.svg" alt="dot" width="8" height="8" />
+          </div>
+          <div className="flex">
+            <div
+              className={`${styles.sideLinks} flex flex-col border-l-2 ml-3 mt-2`}
+            >
+              <Link href="#languages">languages</Link>
+              <Link href="#concepts">concepts</Link>
+              <Link href="#web_development">web development</Link>
+              <Link href="#code_management">code management</Link>
+              <Link href="#clis">cli’s</Link>
+              <Link href="#micro_controllers">
+                micro controllers / engineering
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <div className="flex">
+            <span className="text-lg font-semibold">SKILLS</span>
+            <div className="flex-grow"></div>
+            <Image src="/dot.svg" alt="dot" width="8" height="8" />
+          </div>
+          <div className="flex">
+            <div
+              className={`${styles.sideLinks} flex flex-col border-l-2 ml-3 mt-2`}
+            >
+              <Link href="#languages">languages</Link>
+              <Link href="#concepts">concepts</Link>
+              <Link href="#web_development">web development</Link>
+              <Link href="#code_management">code management</Link>
+              <Link href="#clis">cli’s</Link>
+              <Link href="#micro_controllers">
+                micro controllers / engineering
+              </Link>
+            </div>
+          </div>
+        </div>
+      </ImmobileQuickLinks>
+
       <MobileQuickLinks />
     </>
   );
 }
 
-function ImmobileQuickLinks() {
+function ImmobileQuickLinks({ children }: { children?: React.ReactNode }) {
   return (
     <>
       <div
-        className={`${styles.sideOpen} hidden lg:block bg-grey-dark fixed left-0 bottom-0`}
+        className={`${styles.sideOpen} hidden lg:block bg-grey-dark fixed left-0 bottom-0 p-3`}
         style={{ top: '57px' }}
       >
-        <div className="p-4 flex">
-          <div className="flex-grow"></div>
-          <Image
-            alt="hamburger icon"
-            src="/burger.svg"
-            width="21"
-            height="21"
-          />
-        </div>
-
-        <input
-          type="checkbox"
-          className="opacity-0 absolute top-0 right-0 hover:cursor-pointer"
-          style={{ width: '53px', height: '53px' }}
-        />
-
-        <div className="w-full bg-grey-dark">
-          <span className="flex pr-6">
-            <span className="p-4 text-lg font-semibold">SKILLS</span>
-            <div className="flex-grow"></div>
-            <Image src="/dot.svg" alt="dot" width="8" height="8" />
-          </span>
-          <span className="flex pr-6">
-            <span className="p-4 text-lg font-semibold">EXPERIENCE</span>
-            <div className="flex-grow"></div>
-            <Image src="/dot.svg" alt="dot" width="8" height="8" />
-          </span>
-          <span className="flex pr-6">
-            <span className="p-4 text-lg font-semibold">PROJECTS</span>
-            <div className="flex-grow"></div>
-            <Image src="/dot.svg" alt="dot" width="8" height="8" />
-          </span>
-          <span className="flex pr-6">
-            <span className="p-4 text-lg font-semibold">EDUCATION</span>
-            <div className="flex-grow"></div>
-            <Image src="/dot.svg" alt="dot" width="8" height="8" />
-          </span>
-        </div>
+        {children}
       </div>
     </>
   );
