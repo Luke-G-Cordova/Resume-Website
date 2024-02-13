@@ -1,5 +1,4 @@
 .dropdown > input:checked ~ div {
-  display: block;
   transform: scaleY(1);
   transform-origin: top left;
   transition: all 0.3s ease-out;
@@ -10,4 +9,13 @@
   transform-origin: top left;
   transform: scaleY(0);
   transition: all 0.3s ease-in;
+}
+
+.sideOpen > input:checked + div {
+  /* transform: scaleX(1); */
+  display: block;
+}
+
+.sideOpen > div + input + div {
+  display: none;
 }

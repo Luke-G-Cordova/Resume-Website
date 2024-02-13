@@ -5,10 +5,13 @@ import QuickLinks from './components/quicklinks';
 export default function Home() {
   return (
     <>
-      {/* <Navbar currentPath="/" /> */}
-      <div className="w-full" style={{ height: '100vh' }}>
+      <div
+        className="w-full bg-black relative"
+        style={{ height: '200vh', paddingTop: '57px', paddingLeft: '53px' }}
+      >
+        <Navbar currentPath="/" />
         <QuickLinks />
-        <div className="w-full h-full bg-black"></div>
+        {/* <div className="h-full bg-grey-dark" style={{ width: '53px' }}></div> */}
       </div>
     </>
   );
