@@ -4,7 +4,7 @@ import styles from '@/components/styles/navbar.module.css';
 
 export default function Navbar({ currentPath }: { currentPath: Paths }) {
   return (
-    <div className="w-full flex pt-3 bg-grey-dark fixed top-0 left-0">
+    <div className="hidden w-full lg:flex pt-3 bg-grey-dark fixed top-0 left-0 z-10">
       <Tab currentPath={currentPath} href="/terminal">
         <span className="pl-1">
           <Image

@@ -1,0 +1,13 @@
+.dropdown > input:checked ~ div {
+  display: block;
+  transform: scaleY(1);
+  transform-origin: top left;
+  transition: all 0.3s ease-out;
+}
+
+.dropdown > div {
+  /* display: none; */
+  transform-origin: top left;
+  transform: scaleY(0);
+  transition: all 0.3s ease-in;
+}
