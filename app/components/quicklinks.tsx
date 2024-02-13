@@ -6,15 +6,20 @@ export default function QuickLinks() {
   return (
     <>
       <ImmobileQuickLinks>
-        <div className="flex flex-col">
-          <div className="flex">
+        <div className={`${styles.imDropDown} flex relative flex-col`}>
+          <span className="flex p-3">
             <span className="text-lg font-semibold">SKILLS</span>
             <div className="flex-grow"></div>
-            <Image src="/dot.svg" alt="dot" width="8" height="8" />
-          </div>
+            <Image src="/arrow.svg" alt="arrow" width="9" height="6" />
+          </span>
+          <input
+            className="opacity-0 absolute top-0 left-0 w-full hover:cursor-pointer"
+            style={{ height: '52px' }}
+            type="checkbox"
+          />
           <div className="flex">
             <div
-              className={`${styles.sideLinks} flex flex-col border-l-2 ml-3 mt-2`}
+              className={`${styles.sideLinks} flex flex-col border-l-2 border-grey-light ml-3 mt-2`}
             >
               <Link href="#languages">languages</Link>
               <Link href="#concepts">concepts</Link>
@@ -27,15 +32,21 @@ export default function QuickLinks() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col">
-          <div className="flex">
+
+        <div className={`${styles.imDropDown} flex relative flex-col`}>
+          <div className="flex p-3">
             <span className="text-lg font-semibold">SKILLS</span>
             <div className="flex-grow"></div>
-            <Image src="/dot.svg" alt="dot" width="8" height="8" />
+            <Image src="/arrow.svg" alt="arrow" width="9" height="6" />
           </div>
+          <input
+            className="opacity-0 absolute top-0 left-0 w-full hover:cursor-pointer"
+            style={{ height: '52px' }}
+            type="checkbox"
+          />
           <div className="flex">
             <div
-              className={`${styles.sideLinks} flex flex-col border-l-2 ml-3 mt-2`}
+              className={`${styles.sideLinks} flex flex-col border-l-2 border-grey-light ml-3 mt-2`}
             >
               <Link href="#languages">languages</Link>
               <Link href="#concepts">concepts</Link>
@@ -50,7 +61,28 @@ export default function QuickLinks() {
         </div>
       </ImmobileQuickLinks>
 
-      <MobileQuickLinks />
+      <MobileQuickLinks>
+        <Link href="#skills" className="flex pr-6">
+          <span className="p-4 text-lg font-semibold">SKILLS</span>
+          <div className="flex-grow"></div>
+          <Image src="/dot.svg" alt="dot" width="8" height="8" />
+        </Link>
+        <Link href="#experience" className="flex pr-6">
+          <span className="p-4 text-lg font-semibold">EXPERIENCE</span>
+          <div className="flex-grow"></div>
+          <Image src="/dot.svg" alt="dot" width="8" height="8" />
+        </Link>
+        <Link href="#projects" className="flex pr-6">
+          <span className="p-4 text-lg font-semibold">PROJECTS</span>
+          <div className="flex-grow"></div>
+          <Image src="/dot.svg" alt="dot" width="8" height="8" />
+        </Link>
+        <Link href="#education" className="flex pr-6">
+          <span className="p-4 text-lg font-semibold">EDUCATION</span>
+          <div className="flex-grow"></div>
+          <Image src="/dot.svg" alt="dot" width="8" height="8" />
+        </Link>
+      </MobileQuickLinks>
     </>
   );
 }
@@ -59,8 +91,8 @@ function ImmobileQuickLinks({ children }: { children?: React.ReactNode }) {
   return (
     <>
       <div
-        className={`${styles.sideOpen} hidden lg:block bg-grey-dark fixed left-0 bottom-0 p-3`}
-        style={{ top: '57px' }}
+        className={`hidden lg:block bg-grey-dark fixed left-0 bottom-0`}
+        style={{ top: '57px', width: '200px' }}
       >
         {children}
       </div>
@@ -68,9 +100,12 @@ function ImmobileQuickLinks({ children }: { children?: React.ReactNode }) {
   );
 }
 
-function MobileQuickLinks() {
+function MobileQuickLinks({ children }: { children?: React.ReactNode }) {
   return (
-    <div className="lg:hidden bg-grey-dark w-full flex fixed top-0 left-0">
+    <div
+      className="lg:hidden bg-grey-dark w-full flex fixed top-0 left-0"
+      style={{ boxShadow: '0 2px 5px rgba(0,0,0,.25)' }}
+    >
       <div className="flex">
         <Link
           className="pt-6 pb-6 pl-6 pr-3"
@@ -104,26 +139,7 @@ function MobileQuickLinks() {
           className="absolute left-0 w-full bg-grey-dark"
           style={{ bottom: '-240px' }}
         >
-          <Link href="#skills" className="flex pr-6">
-            <span className="p-4 text-lg font-semibold">SKILLS</span>
-            <div className="flex-grow"></div>
-            <Image src="/dot.svg" alt="dot" width="8" height="8" />
-          </Link>
-          <Link href="#experience" className="flex pr-6">
-            <span className="p-4 text-lg font-semibold">EXPERIENCE</span>
-            <div className="flex-grow"></div>
-            <Image src="/dot.svg" alt="dot" width="8" height="8" />
-          </Link>
-          <Link href="#projects" className="flex pr-6">
-            <span className="p-4 text-lg font-semibold">PROJECTS</span>
-            <div className="flex-grow"></div>
-            <Image src="/dot.svg" alt="dot" width="8" height="8" />
-          </Link>
-          <Link href="#education" className="flex pr-6">
-            <span className="p-4 text-lg font-semibold">EDUCATION</span>
-            <div className="flex-grow"></div>
-            <Image src="/dot.svg" alt="dot" width="8" height="8" />
-          </Link>
+          {children}
         </div>
       </span>
     </div>

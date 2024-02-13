@@ -1,21 +1,30 @@
 .dropdown > input:checked ~ div {
   transform: scaleY(1);
   transform-origin: top left;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-in;
 }
 
 .dropdown > div {
   /* display: none; */
   transform-origin: top left;
   transform: scaleY(0);
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .sideLinks > a {
-  padding: 4px 8px 4px 16px;
+  padding: 4px 8px 4px 8px;
   transition: 0.3s;
+  font-size: 0.9rem;
 }
 
 .sideLinks > a:hover {
   background-color: var(--black);
+}
+
+.imDropDown > input:checked + div {
+  display: block;
+}
+
+.imDropDown > input:not(:checked) + div {
+  display: none;
 }
