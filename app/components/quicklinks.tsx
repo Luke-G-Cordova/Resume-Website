@@ -14,23 +14,26 @@ export default function QuickLinks() {
           <Link href="#clis">cli’s</Link>
           <Link href="#micro_controllers">micro controllers / engineering</Link>
         </QuickLinkGroup>
-
         <QuickLinkGroup name="experience">
-          <Link href="#languages">May 2022 - February 2023</Link>
-          <Link href="#concepts">October 2017 - January 2022</Link>
-          <Link href="#web_development">March 2022</Link>
+          <Link href="#experience_1">May 2022 - February 2023</Link>
+          <Link href="#experience_2">October 2017 - January 2022</Link>
+          <Link href="#experience_3">March 2022</Link>
         </QuickLinkGroup>
         <QuickLinkGroup name="projects">
-          <Link href="#languages">Boids</Link>
-          <Link href="#concepts">stable-diffusion-cli</Link>
-          <Link href="#web_development">BetterSearch</Link>
-          <Link href="#code_management">imagetoascii</Link>
+          <Link href="#boids">Boids</Link>
+          <Link href="#stable-diffusion-cli">stable-diffusion-cli</Link>
+          <Link href="#BetterSearch">BetterSearch</Link>
+          <Link href="#imagetoascii">imageToAscii</Link>
         </QuickLinkGroup>
         <QuickLinkGroup name="education">
-          <Link href="#languages">BS Business Administration</Link>
-          <Link href="#concepts">AS Business Administration</Link>
-          <Link href="#web_development">AA Economics</Link>
-          <Link href="#code_management">AS Natural Science</Link>
+          <Link href="#BS_Business_Administration">
+            BS Business Administration
+          </Link>
+          <Link href="#AS_Business_Administration">
+            AS Business Administration
+          </Link>
+          <Link href="#AA_Economics">AA Economics</Link>
+          <Link href="#AS_Natural_Science">AS Natural Science</Link>
         </QuickLinkGroup>
       </ImmobileQuickLinks>
 
@@ -94,7 +97,7 @@ function ImmobileQuickLinks({ children }: { children?: React.ReactNode }) {
   return (
     <>
       <div
-        className={`hidden lg:block bg-grey-dark fixed left-0 bottom-0`}
+        className={`hidden lg:block bg-grey-dark fixed left-0 bottom-0 overflow-y-auto`}
         style={{ top: '57px', width: '200px' }}
       >
         {children}

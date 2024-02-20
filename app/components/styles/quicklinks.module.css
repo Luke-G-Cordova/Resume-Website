@@ -25,9 +25,13 @@
   display: block;
 }
 
+.imDropDown > input + div > img {
+  transition: all 0.3s ease-out;
+}
 .imDropDown > input:not(:checked) + div > img {
   transform: rotate(180deg);
   z-index: -1;
+  transition: all 0.3s ease-in;
 }
 
 .imDropDown > input:not(:checked) + div + div {
