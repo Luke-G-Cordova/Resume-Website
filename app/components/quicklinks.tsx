@@ -15,13 +15,22 @@ export default function QuickLinks() {
           <Link href="#micro_controllers">micro controllers / engineering</Link>
         </QuickLinkGroup>
 
-        <QuickLinkGroup name="not skills">
-          <Link href="#languages">languages</Link>
-          <Link href="#concepts">concepts</Link>
-          <Link href="#web_development">web development</Link>
-          <Link href="#code_management">code management</Link>
-          <Link href="#clis">cli’s</Link>
-          <Link href="#micro_controllers">micro controllers / engineering</Link>
+        <QuickLinkGroup name="experience">
+          <Link href="#languages">May 2022 - February 2023</Link>
+          <Link href="#concepts">October 2017 - January 2022</Link>
+          <Link href="#web_development">March 2022</Link>
+        </QuickLinkGroup>
+        <QuickLinkGroup name="projects">
+          <Link href="#languages">Boids</Link>
+          <Link href="#concepts">stable-diffusion-cli</Link>
+          <Link href="#web_development">BetterSearch</Link>
+          <Link href="#code_management">imagetoascii</Link>
+        </QuickLinkGroup>
+        <QuickLinkGroup name="education">
+          <Link href="#languages">BS Business Administration</Link>
+          <Link href="#concepts">AS Business Administration</Link>
+          <Link href="#web_development">AA Economics</Link>
+          <Link href="#code_management">AS Natural Science</Link>
         </QuickLinkGroup>
       </ImmobileQuickLinks>
 
