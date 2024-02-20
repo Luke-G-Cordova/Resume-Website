@@ -21,10 +21,15 @@
   background-color: var(--black);
 }
 
-.imDropDown > input:checked + div {
+.imDropDown > input:checked + div + div {
   display: block;
 }
 
-.imDropDown > input:not(:checked) + div {
+.imDropDown > input:not(:checked) + div > img {
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+.imDropDown > input:not(:checked) + div + div {
   display: none;
 }

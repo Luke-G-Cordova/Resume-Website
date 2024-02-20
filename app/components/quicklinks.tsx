@@ -6,59 +6,23 @@ export default function QuickLinks() {
   return (
     <>
       <ImmobileQuickLinks>
-        <div className={`${styles.imDropDown} flex relative flex-col`}>
-          <span className="flex p-3">
-            <span className="text-lg font-semibold">SKILLS</span>
-            <div className="flex-grow"></div>
-            <Image src="/arrow.svg" alt="arrow" width="9" height="6" />
-          </span>
-          <input
-            className="opacity-0 absolute top-0 left-0 w-full hover:cursor-pointer"
-            style={{ height: '52px' }}
-            type="checkbox"
-          />
-          <div className="flex">
-            <div
-              className={`${styles.sideLinks} flex flex-col border-l-2 border-grey-light ml-3 mt-2`}
-            >
-              <Link href="#languages">languages</Link>
-              <Link href="#concepts">concepts</Link>
-              <Link href="#web_development">web development</Link>
-              <Link href="#code_management">code management</Link>
-              <Link href="#clis">cli’s</Link>
-              <Link href="#micro_controllers">
-                micro controllers / engineering
-              </Link>
-            </div>
-          </div>
-        </div>
+        <QuickLinkGroup name="skills">
+          <Link href="#languages">languages</Link>
+          <Link href="#concepts">concepts</Link>
+          <Link href="#web_development">web development</Link>
+          <Link href="#code_management">code management</Link>
+          <Link href="#clis">cli’s</Link>
+          <Link href="#micro_controllers">micro controllers / engineering</Link>
+        </QuickLinkGroup>
 
-        <div className={`${styles.imDropDown} flex relative flex-col`}>
-          <div className="flex p-3">
-            <span className="text-lg font-semibold">SKILLS</span>
-            <div className="flex-grow"></div>
-            <Image src="/arrow.svg" alt="arrow" width="9" height="6" />
-          </div>
-          <input
-            className="opacity-0 absolute top-0 left-0 w-full hover:cursor-pointer"
-            style={{ height: '52px' }}
-            type="checkbox"
-          />
-          <div className="flex">
-            <div
-              className={`${styles.sideLinks} flex flex-col border-l-2 border-grey-light ml-3 mt-2`}
-            >
-              <Link href="#languages">languages</Link>
-              <Link href="#concepts">concepts</Link>
-              <Link href="#web_development">web development</Link>
-              <Link href="#code_management">code management</Link>
-              <Link href="#clis">cli’s</Link>
-              <Link href="#micro_controllers">
-                micro controllers / engineering
-              </Link>
-            </div>
-          </div>
-        </div>
+        <QuickLinkGroup name="not skills">
+          <Link href="#languages">languages</Link>
+          <Link href="#concepts">concepts</Link>
+          <Link href="#web_development">web development</Link>
+          <Link href="#code_management">code management</Link>
+          <Link href="#clis">cli’s</Link>
+          <Link href="#micro_controllers">micro controllers / engineering</Link>
+        </QuickLinkGroup>
       </ImmobileQuickLinks>
 
       <MobileQuickLinks>
@@ -84,6 +48,36 @@ export default function QuickLinks() {
         </Link>
       </MobileQuickLinks>
     </>
+  );
+}
+
+function QuickLinkGroup({
+  children,
+  name,
+}: {
+  children?: React.ReactNode;
+  name: string;
+}) {
+  return (
+    <div className={`${styles.imDropDown} flex relative flex-col`}>
+      <input
+        className="opacity-0 absolute top-0 left-0 w-full hover:cursor-pointer"
+        style={{ height: '52px' }}
+        type="checkbox"
+      />
+      <div className="flex p-3">
+        <span className="text-lg font-semibold">{name.toUpperCase()}</span>
+        <div className="flex-grow"></div>
+        <Image src="/arrow.svg" alt="arrow" width="9" height="6" />
+      </div>
+      <div className="flex">
+        <div
+          className={`${styles.sideLinks} flex flex-col border-l-2 border-grey-light ml-3 mt-2`}
+        >
+          {children}
+        </div>
+      </div>
+    </div>
   );
 }
 
