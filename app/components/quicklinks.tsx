@@ -117,13 +117,18 @@ function MobileQuickLinks({ children }: { children?: React.ReactNode }) {
           className="pt-6 pb-6 pl-6 pr-3"
           href="https://github.com/Luke-G-Cordova"
         >
-          <Image src="/github-logo.svg" width="30" height="30" alt="" />
+          <Image src="/github-logo.svg" width="30" height="30" alt="GitHub" />
         </Link>
         <Link
           className="pt-6 pb-6 pr-6 pl-3"
           href="https://www.linkedin.com/in/luke-cordova-099056239/"
         >
-          <Image src="/linkedin-logo.svg" width="30" height="30" alt="" />
+          <Image
+            src="/linkedin-logo.svg"
+            width="30"
+            height="30"
+            alt="LinkedIn"
+          />
         </Link>
       </div>
       <div className="flex-grow"></div>
