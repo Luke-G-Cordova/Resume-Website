@@ -7,12 +7,12 @@ export default function QuickLinks() {
     <>
       <ImmobileQuickLinks>
         <QuickLinkGroup name="skills">
-          <Link href="#languages">languages</Link>
-          <Link href="#concepts">concepts</Link>
-          <Link href="#web_development">web development</Link>
-          <Link href="#code_management">code management</Link>
-          <Link href="#clis">cli’s</Link>
-          <Link href="#micro_controllers">micro controllers / engineering</Link>
+          <Link href="#languages">Languages</Link>
+          <Link href="#concepts">Concepts</Link>
+          <Link href="#web_development">Web Development</Link>
+          <Link href="#code_management">Code Management</Link>
+          <Link href="#clis">CLI’S</Link>
+          <Link href="#micro_controllers">Micro Controllers / Engineering</Link>
         </QuickLinkGroup>
         <QuickLinkGroup name="experience">
           <Link href="#experience_1">May 2022 - February 2023</Link>
@@ -38,22 +38,22 @@ export default function QuickLinks() {
       </ImmobileQuickLinks>
 
       <MobileQuickLinks>
-        <Link href="#skills" className="flex pr-6">
+        <Link href="#skills" className="flex pr-6 hover:bg-black">
           <span className="p-4 text-lg font-semibold">SKILLS</span>
           <div className="flex-grow"></div>
           <Image src="/dot.svg" alt="dot" width="8" height="8" />
         </Link>
-        <Link href="#experience" className="flex pr-6">
+        <Link href="#experience" className="flex pr-6 hover:bg-black">
           <span className="p-4 text-lg font-semibold">EXPERIENCE</span>
           <div className="flex-grow"></div>
           <Image src="/dot.svg" alt="dot" width="8" height="8" />
         </Link>
-        <Link href="#projects" className="flex pr-6">
+        <Link href="#projects" className="flex pr-6 hover:bg-black">
           <span className="p-4 text-lg font-semibold">PROJECTS</span>
           <div className="flex-grow"></div>
           <Image src="/dot.svg" alt="dot" width="8" height="8" />
         </Link>
-        <Link href="#education" className="flex pr-6">
+        <Link href="#education" className="flex pr-6 hover:bg-black">
           <span className="p-4 text-lg font-semibold">EDUCATION</span>
           <div className="flex-grow"></div>
           <Image src="/dot.svg" alt="dot" width="8" height="8" />
@@ -97,7 +97,7 @@ function ImmobileQuickLinks({ children }: { children?: React.ReactNode }) {
   return (
     <>
       <div
-        className={`hidden lg:block bg-grey-dark fixed left-0 bottom-0 overflow-y-auto`}
+        className={`scrollBar hidden lg:block bg-grey-dark fixed left-0 bottom-0 overflow-y-auto`}
         style={{ top: '57px', width: '200px' }}
       >
         {children}
